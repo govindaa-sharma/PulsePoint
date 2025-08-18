@@ -5,6 +5,9 @@ import HeroSection from './components/HeroSection.jsx';
 import FeaturesSection from './components/FeaturesSection.jsx';
 import Footer from './components/Footer.jsx';
 
+// Import the new dashboard component
+import DashboardPage from './dashboard/DashboardPage.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -12,6 +15,7 @@ function App() {
       <main>
         <HeroSection />
         <FeaturesSection />
+        <DashboardPage />
       </main>
       <Footer />
     </div>
@@ -19,4 +23,3 @@ function App() {
 }
 
 export default App;
-
