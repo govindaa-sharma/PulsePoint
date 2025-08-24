@@ -1,0 +1,175 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "accessList",
+      "inputs": [
+        { "name": "", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "accessRequests",
+      "inputs": [
+        { "name": "", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "addRecord",
+      "inputs": [{ "name": "_cid", "type": "string", "internalType": "string" }],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "approveAccessRequest",
+      "inputs": [
+        { "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "_doctor", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "checkAccess",
+      "inputs": [
+        { "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "_user", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "denyAccessRequest",
+      "inputs": [
+        { "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "_doctor", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getPatientRecords",
+      "inputs": [{ "name": "_patient", "type": "address", "internalType": "address" }],
+      "outputs": [{ "name": "", "type": "bytes32[]", "internalType": "bytes32[]" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "grantAccess",
+      "inputs": [
+        { "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "_doctor", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "patientRecords",
+      "inputs": [
+        { "name": "", "type": "address", "internalType": "address" },
+        { "name": "", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "records",
+      "inputs": [{ "name": "", "type": "bytes32", "internalType": "bytes32" }],
+      "outputs": [
+        { "name": "cid", "type": "string", "internalType": "string" },
+        { "name": "owner", "type": "address", "internalType": "address" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "requestAccess",
+      "inputs": [{ "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" }],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "revokeAccess",
+      "inputs": [
+        { "name": "_recordHash", "type": "bytes32", "internalType": "bytes32" },
+        { "name": "_doctor", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "AccessGranted",
+      "inputs": [
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "doctor", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "AccessRequested",
+      "inputs": [
+        { "name": "doctor", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" },
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "AccessRevoked",
+      "inputs": [
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "doctor", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RecordAdded",
+      "inputs": [
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" },
+        { "name": "cid", "type": "string", "indexed": false, "internalType": "string" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RequestApproved",
+      "inputs": [
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "doctor", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RequestDenied",
+      "inputs": [
+        { "name": "patient", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "doctor", "type": "address", "indexed": true, "internalType": "address" },
+        { "name": "recordHash", "type": "bytes32", "indexed": true, "internalType": "bytes32" }
+      ],
+      "anonymous": false
+    }
+  ]
+}
