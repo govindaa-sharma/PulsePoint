@@ -119,3 +119,16 @@ cd blockchain
 wsl
 forge compile
 make deploy ARGS="--network sepolia"
+```
+
+
+## 👥 Team
+
+| Team Member       | Role                            | GitHub Profile |
+|-------------------|---------------------------------|----------------|
+| Sutirtha Paul     | Full-Stack & Blockchain Developer | [@Sutirtha-paul](https://github.com/sutirthapaul17) |
+| Govinda Sharma    | AI/ML Engineer                  | [@Govindaa-sharma](https://github.com/govindaa-sharma) |
+| Arijit Adhikary   | AI/ML Engineer                  | [@Arijit-adhikary](https://github.com/Arijit963) |
+| Sanchari Dey      | Frontend & Blockchain Developer | [@Sanchari-dey](https://github.com/Sancharidey2) |
+
+Built with ❤️ by Team PulsePoint during the Hack-Heritage 3.0 .
